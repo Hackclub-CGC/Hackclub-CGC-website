@@ -16,7 +16,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="JS/Animatio-text-home.js"></script>
     
-    <title>Hackclubcgc | HOME</title>
+     <title>Hack Club CGC | Home</title>  
+<meta name="description" content= "HackClub CGC believes in learning together. Our goal is to curate a large community of vivid ideas and mindsets wherein each member teach and learn something." />
+<meta name="robots" content= "index, follow"> <title>Hackclubcgc | HOME</title>
     
   
 </head>
