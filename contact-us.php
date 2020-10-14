@@ -15,7 +15,9 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Contact Us</title>
+   <title>Contact Us | Hack Club CGC</title>  
+<meta name="description" content= "You Can directly contact to us via email or filling the contact form ." />
+<meta name="robots" content= "index, follow">
 </head>
 <body style="font-family: 'poppins' , 'open sans' !important">
 <!-- Navbar -->
