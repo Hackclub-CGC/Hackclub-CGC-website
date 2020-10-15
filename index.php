@@ -16,7 +16,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="JS/Animatio-text-home.js"></script>
 
+
     <title>Hackclubcgc | HOME</title>
+
 
 
 </head>
@@ -507,6 +509,7 @@ window.onload = function() {
 </html>
 
 <!--
+
 
 
 -->
