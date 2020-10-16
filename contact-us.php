@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--    top icon-->
-
+   
     <link rel="icon" type="image/png" href="Img/tab_icon.png">
-
+    
     <link rel="stylesheet" href="CSS/TEMPLATE.CSS">
     <link rel="stylesheet" href="CSS/contact-us.css">
      <link rel="stylesheet" href="CSS/Header-style.css">
     <link rel="stylesheet" href="CSS/Home-style.css">
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
+ 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
    <title>Contact Us | Hack Club CGC</title>  
 <meta name="description" content= "You Can directly contact to us via email or filling the contact form ." />
@@ -41,13 +41,13 @@
          <li class="nav-item active">
           <a class="nav-link active" href="#">Contact Us <span class="sr-only">(current)</span></a>
         </li>
-
-
+         
+      
         </ul>
-
+   
   </div>
-</nav>
-
+</nav> 
+      
   <hr class="gradient-line gradientvaliline">
        <div  class="flag">
            <a href="index.php">
@@ -66,7 +66,7 @@
          <div class="col-sm-4 col-sm" >
         <form style="margin: 8em 0 auto auto" class="form-mobile-res" method="POST" action="contact-us.php" >
               <div class="Mobile-display">
-                  <h2 style="text-transform: uppercase;" class="mt-5 text-center">Contact Us </h2>
+                  <h2 style="text-transform: uppercase;" class="mt-5 text-center">Contact Us </h2> 
                   <h1 class="header-gradient-after mb-4" style="height:4px; border-radius: 30px;"></h1>
               </div>
               <div class="form-group">
@@ -78,7 +78,7 @@
                 <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@domain.com" required>
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
-
+              
               <div class="form-group">
                   <label for="exampleInputPassword1">Subject</label>
                   <input type="text" name="Subject" class="form-control" id="exampleInputPassword1" placeholder="Subject" required>
@@ -87,7 +87,7 @@
                   <label>Message</label>
                   <textarea class="form-control" name="Querys" placeholder="Your Query" required></textarea>
                 </div>
-
+                    
                   <button type="submit"   name="submits" class="btn btn-primary btn-block  ">Submit</button>
                 <h4 class="my-5 mx-auto">
                   <?php
@@ -102,7 +102,7 @@
                     echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
                     exit();
                   }
-
+                  
                   if(isset($_POST["submits"]))
                   {
                     $Name =  $_POST["Name"];
@@ -111,23 +111,23 @@
                     $Querys = $_POST["Querys"];
                     $Source = "Contact Form";
                     $sql = "INSERT INTO Contact (Name,Email,Subject,Query,Source) VALUES ('$Name','$Email','$Subject','$Querys',' $Source')";
-
+                                                                  
                                                                   if (mysqli_query($mysqli, $sql)) {
                                                                     $_SESSION["check"] = 10;
-
+                                                                    
                                                                   } else {
                                                                     echo "Error: " . $sql . "<br>" . mysqli_error($mysqli);
                                                                   }
-
+                                                                  
                                                                   mysqli_close($mysqli);
                                                                 }
                                                                   if($_SESSION["check"] == 10 )
                                                                   {
                                                                     echo "Thanks For Filling the Form <br> We Will Reach Out To You Soon ";
                                                                     $_SESSION["check"] == 0;
-
+                                                                    
                                                                   }
-
+                                                              
                                                                 ?>
                 </h4>
             </form>
@@ -136,33 +136,78 @@
       </div>
   </section>
 
-
-
+    
+  
   <footer class="page-footer font-small blue-grey lighten-5 mt-5">
 
+    <div>
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0" style="font-size:large;font-weight: bolder;" >Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right footer-icons">
+            <!-- Twitter -->
+            <a  href="#">
+              <img src="Img/icons/facebook.png" class="footer-img-icon" alt="">
+            </a>
+
+            <a  href="#" >
+                <img src="Img/icons/instagram.png" class="footer-img-icon" alt="">
+              </a>
+              <a  href="#" >
+                <img src="Img/icons/medium.png" class="footer-img-icon" alt="">
+              </a>
+              <a  href="#" >
+                <img src="Img/icons/slack.png" class="footer-img-icon" alt="">
+              </a>
+              <a  href="#" >
+                <img src="Img/icons/telegram.png" class="footer-img-icon" alt="">
+              </a>
+              <a  href="#" >
+                <img src="Img/icons/logo.png" class="footer-img-icon" alt="">
+              </a>
+           
+           
+            
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
     <h1 class="header-gradient-after"></h1>
     <!-- Footer Links -->
     <div class="container text-center text-md-left mt-5">
-
-
+       
+      
       <!-- Gri row -->
     <div class="row  dark-grey-text">
-
+      
         <!-- Grid column -->
         <div class="col-12 col-lg-4">
-
+  
           <!-- Content -->
           <h6 class="text-uppercase font-weight-bold">Hack Club CGC</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto footer-gradient-after" style="width: 60px;">
           <p style="font-weight: 500;">HackClub CGC believes in learning together. Our goal is to curate a large community of vivid ideas and mindsets wherein each member teach and learn something. We make sure that no one gets left behind.</p>
-
+  
         </div>
         <!-- Grid column -->
-
-
+        
+  
         <!-- Grid column -->
         <div class="col-6 col-lg-4 mb-4 footer-useful-pg display-pc">
-
+  
           <!-- Links -->
           <h6 class="text-uppercase font-weight-bold">Useful links</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto footer-gradient-after" style="width: 60px;">
@@ -175,60 +220,35 @@
           <p>
             <a class="dark-grey-text" href="contact-us.php">Join Now </a>
           </p>
-
-
+          
+  
         </div>
         <!-- Grid column -->
-
+  
         <!-- Grid column -->
-        <div class=" mb-4 footer-useful-pg display-pc ">
-
+        <div class="col-6 col-lg-4 mb-4 footer-useful-pg display-pc ">
+  
           <!-- Links -->
           <h6 class="text-uppercase font-weight-bold">Contact</h6>
           <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto footer-gradient-after" style="width: 60px;">
-
-            <div class="text-center text-md-right footer-icons">
-              <!-- Twitter -->
-              <a  href="mailto:hacknclubcgc@gmail.com">
-                <img src="Img/icons/email.png" class="footer-img-icon" alt="">
-              </a>
-              <a  href="https://www.facebook.com/Hackclub-CGC-108265361022351/">
-                <img src="Img/icons/facebook.png" class="footer-img-icon" alt="">
-              </a>
-
-              <a  href="https://www.instagram.com/hackclubcgc/" >
-                  <img src="Img/icons/instagram.png" class="footer-img-icon" alt="">
-                </a>
-                <a  href="#" >
-                  <img src="Img/icons/medium.png" class="footer-img-icon" alt="">
-                </a>
-                <a  href="#" >
-                  <img src="Img/icons/slack.png" class="footer-img-icon" alt="">
-                </a>
-                <a  href="https://t.me/joinchat/OfRcaUY2Qrnze53bH9wRtw" >
-                  <img src="Img/icons/telegram.png" class="footer-img-icon" alt="">
-                </a>
-                <a  href="#" >
-                  <img src="Img/icons/logo.png" class="footer-img-icon" alt="">
-                </a>
-
-
-
-            </div>
-
-
+          <p>
+            <a href="mailto:hacknclubcgc@gmail.com" style="color: black; text-decoration: none; font-size: small">
+            <i class="fas fa-envelope mr-3" style="font-size: 20px !important;"></i><br>	
+services@hackclubcgc.tech
+</a>
+            </p>
         </div>
         <!-- Grid column -->
-
+  
       </div>
       <!-- Grid row -->
-
+  
     </div>
     <!-- Footer Links -->
     <h1 class="header-gradient-after"></h1>
     <!-- Copyright -->
     <!-- Copyright -->
-
+  
   </footer>
 
 </body>
